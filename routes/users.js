@@ -88,8 +88,8 @@ router.post('/reset-password', async(req,res)=>{
     var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "1999shubhamjoshi@gmail.com",
-          pass: "kqpbptbxvdetxvpr",
+          user: "manifun51@gmail.com",
+          pass: "mani1234",
         },
       });
 
