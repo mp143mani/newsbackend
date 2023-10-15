@@ -94,7 +94,7 @@ router.post('/reset-password', async(req,res)=>{
       });
 
       var mailOptions = {
-        from: "1999shubhamjoshi@gmail.com",
+        from: "manifun51@gmail.com",
         to:  user.email,
         subject: "Password Reset",
         text: "That was easy!",
@@ -102,7 +102,7 @@ router.post('/reset-password', async(req,res)=>{
        <h2>Hello ${user.email}</h2>
        <p>We've recieved a request to reset the password for your account associated with your email.
        You can reset your password by clicking the link below</p>
-       <a href=https://newsblogback.onrender.com/users/update-password/${token}> Reset Password</a>
+       <a href=https://mysitebackend.onrender.com/users/update-password/${token}> Reset Password</a>
        <p><b>Note:</b>The link expires 15 minutes from now</p>
       </div>`,
       };
