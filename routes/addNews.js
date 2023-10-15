@@ -28,28 +28,28 @@ router.get('/getUserNews',async(req,res)=>{
 
 
 
-// router.post('/leadAdd', async(req,res)=>{
-//   try {
-//     let user = await usersModel.find({email:req.body.email})
-//     if(user.length)
-//     {
-//       res.send({
-//         statusCode:400,
-//         message:"lead Already Exists"
-//       })
-//     }
-//     else{
-//       let newUser = await usersModel.create(req.body)
-//       res.send({
-//         statusCode:200,
-//         message:"Lead added Successfull"
-//       })
-//     }
-//   } catch (error) {
-//     console.log(error)
-//     res.send({statusCode:200,message:"Internal Server Error",error})
-//   }
-// })
+router.post('/leadAdd', async(req,res)=>{
+  try {
+    let user = await usersModel.find({email:req.body.email})
+    if(user.length)
+    {
+      res.send({
+        statusCode:400,
+        message:"lead Already Exists"
+      })
+    }
+    else{
+      let newUser = await usersModel.create(req.body)
+      res.send({
+        statusCode:200,
+        message:"Lead added Successfull"
+      })
+    }
+  } catch (error) {
+    console.log(error)
+    res.send({statusCode:200,message:"Internal Server Error",error})
+  }
+})
 
 
 
